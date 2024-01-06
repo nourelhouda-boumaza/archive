@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Liste des Artiles</title>
+</head>
+
+<body class="page-layout">
+  <nav class="navbar">
+    <div class="navber-links">
+      <a href="./admin.html">Acceuil</a>
+      <a href="./listeArticle.html">Fichiers</a>
+      <a href="./listeEmploye.html">Employés</a>
+    </div>
+    <button class="btn"><a href="./login.html">Se Deconnecter</a></button>
+  </nav>
+  <div class="main-content">
+    <div>
+      
+      <h1 class="section-title">Liste des Fichiers</h1>
+      <button class="btn" style="margin-left: 85%;"><a href="./ajouterArticle.html">Ajouter Fichier</a></button>
+    
+      <div class="list">
+        <input type="text" id="myInput" onkeyup="myFunction()"
+          placeholder="Chercher par nom, identificateur, date ou description" title="Type in a name">
+
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:20%;">Nom</th>
+            <th style="width:25%;">Identificateur d'agriculteur</th>
+            <th style="width:15%;">Date de création</th>
+            <th style="width:60%;">Déscription</th>
+            <th style="width:60%;">Fichier</th>
+            <th>Modifier</th>
+          </tr>
+          <tr>
+            <td>Fichier 1</td>
+            <td>1234</td>
+            <td>01/01/2024</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex sed fuga provident dignissimos alias,
+              molestias tempore id harum, eos saepe ab recusandae quas ratione debitis sit fugit. Temporibus, dicta.
+            </td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Fichier 2</td>
+            <td>0987</td>
+            <td>01/01/2024</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cumque a illo qui voluptates neque
+              optio, dignissimos fuga. Autem nulla, quos in assumenda vel perspiciatis nam accusamus ullam odio
+              pariatur!</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Fichier 3</td>
+            <td>2345</td>
+            <td>26/12/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem iusto expedita non consectetur
+              dignissimos aut quae earum fuga cupiditate? Obcaecati quos, consectetur quisquam minus numquam rerum
+              beatae esse quam eveniet.</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Koniglich Essen</td>
+            <td>8754</td>
+            <td>10/12/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi minus hic illo aliquid quisquam? Facilis
+              itaque nesciunt natus blanditiis, at, sapiente doloribus obcaecati delectus laboriosam suscipit, ut
+              corporis fugit quo!</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>8012</td>
+            <td>01/12/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam non id eum sunt et voluptate rerum
+              commodi ducimus architecto natus! Adipisci accusamus dignissimos libero perspiciatis consequatur? Dolorem
+              delectus excepturi nam?</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>4321</td>
+            <td>22/11/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit voluptates obcaecati, mollitia
+              officia voluptatum est asperiores provident ipsum illum, excepturi quas eligendi, soluta placeat error
+              quia temporibus optio odit esse!</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>9876</td>
+            <td>19/11/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore porro iusto, perferendis eum
+              maxime. Veniam culpa fuga eum, odio possimus minima, consequuntur dolores temporibus officiis ipsa
+              impedit, dolorum eaque!</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+          <tr>
+            <td>Paris specialites</td>
+            <td>0615</td>
+            <td>10/10/2023</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi error iure hic, laborum, consequuntur
+              minus excepturi eaque aperiam doloremque modi velit, vel corporis nemo repudiandae consectetur ab animi.
+              Magni, doloribus!</td>
+            <td><a href="./Article.html">Afficher</a></td>
+            <td><a href="./modifierArticle.html">Modifier</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+      <i class="fa-solid fa-envelope fa-2xl"></i>
+      <i class="fa-solid fa-phone fa-2xl"></i>
+      <i class="fa-brands fa-facebook fa-2xl"></i>
+    </footer>
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, td1, td2, td3, i, txtValue, txtValue1, txtValue2, txtValue3;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          td1 = tr[i].getElementsByTagName("td")[1];
+          td2 = tr[i].getElementsByTagName("td")[2];
+          td3 = tr[i].getElementsByTagName("td")[3];
+          if (td || td1 || td2 || td3) {
+            txtValue = td.textContent || td.innerText;
+            txtValue1 = td1.textContent || td1.innerText;
+            txtValue2 = td2.textContent || td2.innerText;
+            txtValue3 = td3.textContent || td3.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 || txtValue3.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+</body>
+
+</html>

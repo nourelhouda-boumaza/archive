@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Liste des Employé</title>
+</head>
+
+<body class="page-layout">
+  <nav class="navbar">
+    <div class="navber-links">
+    <a href="./admin.html">Acceuil</a>
+    <a href="./listeArticle.html">Fichiers</a>
+    <a href="./listeEmploye.html">Employés</a>
+  </div>
+    <button class="btn"><a href="./login.html">Se Deconnecter</a></button>
+  </nav>
+    <div class="main-content">
+      <h1 class="section-title">Liste des Employés</h1>
+      <button class="btn" style="margin-left: 83%;"><a href="./ajouterEmploye.html">Ajouter Employé</a></button>
+      <div class="list">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Chercher par nom, prénom ou statut" title="Type in a name">
+
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:20%;">Nom</th>
+            <th style="width:20%;">Prénom</th>
+            <th style="width:20%;">Statut</th>
+            <th style="width:15%;">Consultation</th>
+            <th style="width:15%;">Modification</th>
+            <th style="width:10%;">Ajout</th>
+          </tr>
+          <tr>
+            <td>Futterkiste</td>
+            <td>Alfreds</td>
+            <td>Ingénieur</td>
+            <td>Oui</td>
+            <td>Non</td>
+            <td>Non</td>
+          </tr>
+          <tr>
+            <td>Berglunds</td>
+            <td>snabbkop</td>
+            <td>Assistant de direction</td>
+            <td>Oui</td>
+            <td>Non</td>
+            <td>Non</td>
+            
+          </tr>
+          <tr>
+            <td>Island</td>
+            <td>Trading</td>
+            <td>Archiviste</td>
+            <td>Oui</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          
+          </tr>
+          <tr>
+            <td>Koniglich</td>
+            <td>Essen</td>
+            <td>Assistant de directions</td>
+            <td>Oui</td>
+            <td>Non</td>
+            <td>Non</td>
+            
+            
+          </tr>
+          <tr>
+            <td>Laughing</td>
+            <td>Winecellars</td>
+            <td>Directeur</td>
+            <td>Oui</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Magazzini</td>
+            <td> Alimentari</td>
+            <td>Ingénieur</td>
+            <td>Oui</td>
+            <td>Non</td>
+            <td>Non</td>
+            
+            
+          </tr>
+          <tr>
+            <td>North</td>
+            <td>Riuniti</td>
+            <td>Archiviste</td>
+            <td>Oui</td>
+            <td>Oui</td>
+            <td>Oui</td>
+          </tr>
+          <tr>
+            <td>Paris</td>
+            <td>specialites</td>
+            <td>Assistant</td>
+            <td>Oui</td>
+            <td>Non</td>
+            <td>Non</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+      <i class="fa-solid fa-envelope fa-2xl"></i>
+      <i class="fa-solid fa-phone fa-2xl"></i>
+      <i class="fa-brands fa-facebook fa-2xl"></i>
+    </footer>
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td,td1,td2,td3, i, txtValue, txtValue1, txtValue2, txtValue3;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        td1 = tr[i].getElementsByTagName("td")[1];
+        td2 = tr[i].getElementsByTagName("td")[2];
+        td3 = tr[i].getElementsByTagName("td")[3];
+        if (td || td1 || td2 || td3) {
+          txtValue = td.textContent || td.innerText;
+          txtValue1 = td1.textContent || td1.innerText;
+          txtValue2 = td2.textContent || td2.innerText;
+          txtValue3 = td3.textContent || td3.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1 ||txtValue1.toUpperCase().indexOf(filter) > -1||txtValue2.toUpperCase().indexOf(filter) > -1||txtValue3.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+</body>
+
+</html>
