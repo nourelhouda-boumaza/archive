@@ -19,14 +19,26 @@
   </nav>
   <div class="main-content">
     <div>
-      
+
       <h1 class="section-title">Ajouter Fichier</h1>
       <form action="" method="post">
         <input type="text" name="Nom" class="input" placeholder="Nom du Fichier">
         <input type="text" name="id" class="input" placeholder="Identificateur d'agriculteur">
         <input type="date" name="date" class="input" placeholder="Date de creaction">
         <input type="text" name="description" class="input" placeholder="Déscription">
+        <input type="text" name="description" class="input" placeholder="Localisation">
+        <div style="margin-left: 10px;">
+          <p>Etat de Fichier:</p>
+          <input type="radio" id="Oui" name="fav_language" value="Oui">
+          <label for="html">Approuvé</label><br>
+          <input type="radio" id="Non" name="fav_language" value="Non">
+          <label for="css">Rejeté</label><br>
+          <input type="radio" id="Non" name="fav_language" value="Non">
+          <label for="css">Répété</label><br>
+        </div>
+        <br>
         <input type="file" name="" class="input" placeholder="choisir fichier">
+
         <button class="btn" style="margin-left: 40%;"><a href="./listeArticle.html">Ajouter</a></button>
       </form>
 
